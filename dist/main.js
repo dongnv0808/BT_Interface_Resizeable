@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Circle_1 = require("./Circle");
+const Rectangle_1 = require("./Rectangle");
+const Square_1 = require("./Square");
+let shape = [];
+shape[0] = new Circle_1.Circle("Hinh tron", 3);
+console.log(`Dien tich hinh tron = ${shape[0].getArea()}`);
+shape[1] = new Rectangle_1.Rectangle("Hinh chu nhat", 10, 5);
+console.log(`Dien tich hinh chu nhat = ${shape[1].getArea()}`);
+shape[2] = new Square_1.Square("Hinh vuong", 5);
+console.log(`Dien tich hinh vuong = ${shape[2].getArea()}`);
+let percentRandom = (Math.floor(Math.random() * 100) + 1) / 100;
+let percentRandom1 = (Math.floor(Math.random() * 100) + 1) / 100;
+let percentRandom2 = (Math.floor(Math.random() * 100) + 1) / 100;
+console.log(`Dien tich hinh tron tang ${percentRandom * 100}% = ${shape[0].getArea() + (shape[0].getArea() * percentRandom)}`);
+console.log(`Dien tich hinh chu nhat tang ${percentRandom1 * 100}% = ${shape[1].getArea() + (shape[1].getArea() * percentRandom1)}`);
+console.log(`Dien tich hinh vuong tang ${percentRandom2 * 100}% = ${shape[2].getArea() + (shape[2].getArea() * percentRandom2)}`);
